@@ -39,3 +39,19 @@ const info = document.getElementById("info");
 const prevBtn = document.querySelector(".prev-btn");
 const nextvBtn = document.querySelector(".next-btn");
 const randomBtn = document.querySelector(".random-btn");
+
+let currentItem = 2;
+
+//start loading the initial item
+window.addEventListener("DOMContentLoaded", function(){
+    showPerson(currentItem);
+});
+
+
+function showPerson(person){
+  const item = reviews[person];
+  img.src = item.img;
+  author.textContent = item.name;
+  job.textContent = item.job;
+  info.textContent = item.text;
+}
